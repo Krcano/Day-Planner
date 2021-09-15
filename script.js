@@ -1,44 +1,79 @@
 
 //To Do list
-/* 1. Create standard business  time slots ~9am-5pm
+/* 1. Create standard business  time slots ~8am-8pm
         a.Must be color-coded to show events on past present and future dates
    2. When timeblock is clicked can insert text
         a. Needs a save button to save event
    3. Must savec to local storage even after refreshing the page
   */
-var saveButton = document.querySelectorAll('.saveBtn')
+
+
+
+
+
+// All variables
+  
+   var saveButton = document.querySelectorAll('.save-Btn')
+   var eventEl = document.querySelectorAll('.event')
+
+
+//  Current time and date 
+
    var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY, h:mm:ss a"));
-
-var inputEl = document.createElement("event");
-inputEl.setAttribute('type', 'text');
-inputEl.setAttribute('value', 'default');
+$("#currentDay").text(today.format("MMM Do, YYYY"));
 
 
+// color coding
+var hour = moment().hours()
 
-
-
-
-// local storage DOESNT WORK
-function saveEvents(){
-var eventName = document.querySelectorAll(".input");
-var task ={
-     name: eventName.value,
-};
-}
-if(localStorage.getItem("task") !== null){
-     var eventSaves = JSON.parse(localStorage.getItem('task'));
-     eventSaves.push(task);
-     localStorage.setItem('task', JSON.stringify(eventArray));
-}else{
-     var eventArray = [task]
-     localStorage.setItem('task', JSON.stringify(eventArray));
+function colorHour(){
+   $("tr").each(function(){
+      var timeBlock = parseInt($(this).attr("id"))
+     console.log($(this).children(".event"))
+      if( timeBlock < hour){
+         $(this).children(".event").children("input").addClass("past")
+         $(this).children(".event").addClass("past")
+      }else if(timeBlock === hour){
+         $(this).children(".event").children("input").addClass("present")
+         $(this).children(".event").addClass("present")
+      } else{
+         $(this).children(".event").children("input").addClass("future")
+         $(this).children(".event").addClass("future")
+      }
+   
+   })
 }
 
+colorHour();
 
 
-saveButton.addEventListener('click', function(event){
-     event.preventDefault();
-     saveEvents();
 
+
+
+
+// local storage
+$(".save-Btn").on("click", function(){
+   var textValue = $(this).parent().siblings("td").children("input").val()
+   console.log(textValue)
+   var hour = $(this).parent().parent().attr("id")
+   localStorage.setItem(hour, textValue)
+}) 
+
+$(".input").each(function(){
+   var hour = $(this).parent().parent().attr("id")
+   var storedText = localStorage.getItem(hour)
+   $(this).val(storedText)
 })
+
+
+
+
+     
+
+   
+
+
+
+
+
+ 

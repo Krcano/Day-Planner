@@ -57,16 +57,17 @@ textarea {
   color: white;
 }
 
-.saveBtn {
+.save-Btn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-  width: 30%;
+  
+  
 }
 
-.saveBtn i:hover {
+.save-Btn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
@@ -83,10 +84,16 @@ table{
 
 }
 td{
-  width:70%;
+  width:80%;
+}
+.box{
+
+  
 }
 input {
   width: 100%;
-  border: transparent;
+  border:transparent;
+ 
 }
+
 
