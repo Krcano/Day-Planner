@@ -1,10 +1,10 @@
 # Day-Planner
 
 ## Description
-This project is a day planner showing that tracks a 12 hour day from 8am to 8pm. The planner show you the current day and 12 time slots where you can write in your planned events and save them. The planner is built to color code the time blocks based on what time it is; grey is past, red is current time, and green is future. This planner was fairly simple in creating but the problem I was having was with the color coding function making sure that the whole block got shaded in and with the local storage because I was using jquery which I'm not as familiar with.
+This project is a day planner that tracks a 12 hour day from 8am to 8pm. The planner shows you the current day and 12 time slots where you can write in your planned events and save them. The planner is built to color code the time blocks based on what time it is, grey is past, red is current time, and green is future. This planner was fairly simple in creating but the problem I was having was with the color coding function making sure that the whole block got shaded in and with the local storage because I was using jquery which I'm not as familiar with.
 
 ## Usage
-To get started you will need to find the time block in which your event will take place, then you will type the name of your event and save. If you wish to delete the event simply select backspace until its gone and then save again.
+To get started you will need to find the time block in which your event will take place, then you will type the name of your event and save. If you wish to delete the event simply select the event and backspace until its gone and then save again.
 
 ![My Quiz](./Assets/plannerScreenshot.png)
 
