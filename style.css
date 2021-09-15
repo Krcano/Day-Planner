@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color:whitesmoke
 }
 
 textarea {
@@ -63,6 +64,8 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  width:100%;
+  
   
   
 }
@@ -78,18 +81,16 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 20px;
+  background-color: white;
 }
 table{
   width:100%;
 
 }
 td{
-  width:80%;
+  width:90%;
 }
-.box{
 
-  
-}
 input {
   width: 100%;
   border:transparent;
