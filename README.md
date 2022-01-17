@@ -11,6 +11,12 @@ To get started you will need to find the time block in which your event will tak
 [livesite](https://krcano.github.io/Day-Planner/)
 
 
+| Technologies Used |
+| ----------------- |
+| JQuery         |
+| Moment.js |
+| HTML              |
+| CSS               |
 ## MIT License
 
 Copyright (c) [2021] [Kelly R. Cano]
